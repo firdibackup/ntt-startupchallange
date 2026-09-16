@@ -45,7 +45,7 @@ export function PastSpeakersJudgesDialog() {
       <Dialog>
         <DialogTrigger asChild>
           <Button className="min-h-16 rounded-2xl border border-blue-ntt-200/35 bg-[#08172d]/85 px-8 py-4 text-center text-xl font-extrabold leading-snug whitespace-normal text-blue-ntt-200 shadow-[0_18px_36px_rgba(8,23,45,0.32)] transition-[transform,background-color,border-color,color,box-shadow] duration-200 ease-out hover:-translate-y-0.5 hover:border-blue-ntt-200/55 hover:bg-[#0d2342] motion-reduce:hover:translate-y-0">
-            View more Past Speakers and Judges
+            View Past Speakers and Judges
           </Button>
         </DialogTrigger>
         <DialogContent className="max-h-[85vh] overflow-hidden border-white/10 bg-[#071224] p-0 text-white shadow-[0_30px_120px_rgba(2,6,23,0.7)] sm:max-w-6xl">

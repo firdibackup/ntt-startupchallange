@@ -2,14 +2,14 @@ import React from "react";
 import { CountdownTimer } from "../ui/countdown-timer";
 
 export function ComingSoonSection2026() {
-  // Target date for the countdown: September 5, 2026 at 22:59 WIB (UTC+7)
-  const targetDate = new Date("2026-09-05T22:59:00+07:00").getTime();
+  // Target date for the countdown: November 11, 2026 at 13:00 WIB (UTC+7)
+  const targetDate = new Date("2026-11-11T13:00:00+07:00").getTime();
 
   return (
     <section className="container mx-auto px-4 py-20 md:py-32 text-center text-white">
       <div className="max-w-4xl mx-auto space-y-12">
         <h2 className="text-4xl font-bold leading-tight tracking-[0.12em]">
-          The NTT Startup Challenge 2026 Submisson Closes in
+          COUNTDOWN TO GRAND FINAL
         </h2>
 
         <div className="relative inline-block group w-full max-w-4xl">
@@ -21,12 +21,12 @@ export function ComingSoonSection2026() {
               date={targetDate}
               completedNode={
                 <p className="text-2xl md:text-5xl font-black text-blue-ntt-200 uppercase tracking-[0.2em] animate-pulse">
-                  11th November 2026
+                  The Grand Final is Here
                 </p>
               }
             />
             <p className="text-xl md:text-2xl mt-12 text-white/60 font-black uppercase tracking-[0.21em] animate-pulse">
-              5th September 2026
+              11th November 2026
             </p>
           </div>
         </div>

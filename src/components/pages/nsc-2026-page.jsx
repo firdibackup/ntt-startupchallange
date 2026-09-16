@@ -8,7 +8,10 @@ import { AwardsSection2026 } from "@/components/nsc-2026/awards-section";
 import { PersonCarouselSection2026 } from "@/components/nsc-2026/person-carousel-section";
 import { InfoSessionSection2026 } from "@/components/nsc-2026/info-session-section";
 import SpeaksSection from "@/components/section-speaks";
-import { SPEAKERS_CONTENT, JUDGES_CONTENT } from "@/constant/speaks-content";
+import {
+  SPEAKERS_JUDGES_CONTENT,
+  SPEAKER_JUDGES_CONTENT_2026,
+} from "@/constant/speaks-content";
 import { NewsSection } from "@/components/news-section";
 import { ListSection } from "@/components/modules/list-section";
 import { PARTNER_CONTENT_2026 } from "@/constant/finalist-content";
@@ -25,15 +28,18 @@ export function Nsc2026PageContent() {
       >
         <HeroContent2026 />
       </Hero>
-      {/* <ComingSoonSection2026 /> */}
+      <ComingSoonSection2026 />
       <HistorySection2026 />
       <FeedbackSection2026 />
       <AwardsSection2026 />
       <PersonCarouselSection2026
-        title="Past Speakers"
-        items={SPEAKERS_CONTENT}
+        title="Meet the Speakers & Judges of 2026"
+        items={SPEAKER_JUDGES_CONTENT_2026}
       />
-      <PersonCarouselSection2026 title="Past Judges" items={JUDGES_CONTENT} />
+      <PersonCarouselSection2026
+        title="Past Speakers And Judges"
+        items={SPEAKERS_JUDGES_CONTENT}
+      />
       <PastSpeakersJudgesDialog />
       <InfoSessionSection2026 />
       <ListSection

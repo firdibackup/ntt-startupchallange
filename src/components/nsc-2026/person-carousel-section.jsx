@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import {
   Carousel,
@@ -11,14 +11,55 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { SectionHeading2026 } from "./section-heading";
 
+// Sub-pixel rounding makes scrollHeight exceed clientHeight by a hair even when
+// nothing is actually cut off, so require a real overflow before showing the button.
+const OVERFLOW_TOLERANCE_PX = 2;
+
+/**
+ * Reports whether the referenced element is currently clamped by CSS.
+ * Measuring beats guessing from word count: card width changes per breakpoint.
+ * Measurement is skipped while expanded, where the clamp is lifted and the
+ * element can no longer overflow.
+ *
+ * @param {React.RefObject<HTMLElement>} elementRef
+ * @param {boolean} isExpanded
+ * @returns {boolean}
+ */
+function useIsClamped(elementRef, isExpanded) {
+  const [isClamped, setIsClamped] = useState(false);
+
+  useEffect(() => {
+    const element = elementRef.current;
+    if (!element || isExpanded) return;
+
+    const measure = () => {
+      setIsClamped(
+        element.scrollHeight > element.clientHeight + OVERFLOW_TOLERANCE_PX
+      );
+    };
+
+    measure();
+
+    if (typeof ResizeObserver === "undefined") return;
+
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [elementRef, isExpanded]);
+
+  return isClamped;
+}
+
 function PersonCard({ person }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const bioRef = useRef(null);
+  const isClamped = useIsClamped(bioRef, isExpanded);
 
   return (
     <div className="flex flex-col h-full bg-white/[0.02] border border-white/5 rounded-3xl p-8 hover:bg-white/[0.04] transition-colors text-left">
       <div className="relative w-24 h-24 rounded-full overflow-hidden shrink-0 border border-white/10 mb-6">
         <Image
-          src={`/speakers/${person.id}.webp`}
+          src={person.image ?? `/speakers/${person.id}.webp`}
           alt={person.name}
           fill
           className="object-cover"
@@ -31,13 +72,14 @@ function PersonCard({ person }) {
 
       <div className="relative flex-grow">
         <p
+          ref={bioRef}
           className={`text-gray-400 text-sm leading-relaxed font-light tracking-wide ${
             isExpanded ? "line-clamp-none" : "line-clamp-3"
           }`}
         >
           {person.bio}
         </p>
-        {person.bio.split(" ").length > 30 && (
+        {isClamped && (
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="text-blue-ntt-200 hover:text-white mt-4 text-sm font-semibold transition-colors focus:outline-none"

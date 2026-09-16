@@ -134,7 +134,139 @@ export const JUDGES_CONTENT = [
   },
 ];
 
+// Speakers and judges of NTTSC 2025. Some people served in both roles, so
+// judges already listed as speakers are filtered out to keep ids unique.
+export const SPEAKERS_JUDGES_CONTENT = [
+  ...SPEAKERS_CONTENT,
+  ...JUDGES_CONTENT.filter(
+    (judge) => !SPEAKERS_CONTENT.some((speaker) => speaker.id === judge.id)
+  ),
+];
+
+// Speakers and judges lined up for NTTSC 2026. Portraits live in
+// public/speakers/2026 and are referenced explicitly because they are not
+// keyed by id like the older speaker photos.
+export const SPEAKER_JUDGES_CONTENT_2026 = [
+  {
+    id: "kuan-hsu-2026",
+    name: "Kuan Hsu",
+    organization: "Fund Manager, Synexia Ventures",
+    image: "/speakers/2026/Kuan Hsu.webp",
+    bio: "Kuan Hsu is the Managing Director of Synexia Ventures, an investment vehicle established to reinforce NTT Group’s business development in Southeast Asia. Synexia Ventures aims to further strengthen these Group-wide initiatives by establishing an investment platform specialized in Southeast Asia, accelerating NTT Group’s collaboration with local startups and fostering new business creation in the region.",
+  },
+  {
+    id: "akie-iriyama-2026",
+    name: "Akie Iriyama",
+    organization: "Professor, Waseda Business School",
+    image: "/speakers/2026/Akie Iriyama.webp",
+    bio: "Akie Iriyama is a professor at Waseda Business School. His research in strategic management, international business, and entrepreneurship has been published in prestigious journals. Previously, he worked as an industrial economist and consultant at Mitsubishi Research Institute Inc. in Japan.",
+  },
+  {
+    id: "takeshi-ebihara-2026",
+    name: "Takeshi Ebihara",
+    organization: "Founding General Partner of Rebright Partners",
+    image: "/speakers/2026/Takeshi Ebihara.webp",
+    bio: "Takeshi Ebihara is Founding General Partner at Rebright Partners, VC firm invests in Seed to Series-A Startups in SE Asia and India includes Indonesian Largest IPO company Bukalapak (1st round Lead/Solo), Philipino Largest tech exit company Coins.Ph (1st round co-lead), multiple Indian Unicorn and Soonicorns. Ebihara has been in the industry more than decades as a venture capitalist as well as serial entrepreneur started his career at JAFCO, the largest VC/PE firm in Japan in 1994. He also founded and managed several Tech companies includes Tokyo Stock-EX Listed Public Company.",
+  },
+  {
+    id: "hsien-hui-tong-2026",
+    name: "Hsien-Hui Tong",
+    organization: "Executive Director, SG Innovate",
+    image: "/speakers/2026/Hsien Hui Tong.webp",
+    bio: "Leads SGInnovate’s investments in Southeast Asia, backing AI, robotics and quantum startups.",
+  },
+  {
+    id: "ben-tulloch-2026",
+    name: "Ben Tulloch",
+    organization: "Executive Managing Director, NTT Data APAC",
+    image: "/speakers/2026/Ben Tulloch.webp",
+    bio: "Advisory lead for Asia Pacific at NTT DATA across cloud, data & AI, cybersecurity and digital platforms.",
+  },
+  {
+    id: "yuma-kotake-2026",
+    name: "Yuma Kotake",
+    organization: "Managing Director, NTT Docomo Ventures",
+    image: "/speakers/2026/Yuma Kotake.webp",
+    bio: "Yuma Kotake is the director of NTT Docomo Ventures, a corporate venture capital of NTT Group, and responsible for investment in Southeast Asia. He also has more than 10 years of experience as in-house lawyer dealing with cross-border M&A and alliance.",
+  },
+  {
+    id: "ken-katsuyama-2026",
+    name: "Ken Katsuyama",
+    organization: "Senior Vice President, NTT",
+    image: "/speakers/2026/Ken Katsuyama.webp",
+    bio: "Ken Katsuyama is the Senior Vice President, Head of Global Business at Nippon Telegraph and Telephone Corporation (NTT). His current responsibility is the global business of the whole NTT group. In addition, he is a member of the board of directors of NTT DATA, Inc., a major operating company of NTT group covering outside of Japan.",
+  },
+];
+
 export const PAST_SPEAKERS_JUDGES_CONTENT = [
+  {
+    title: "NTTSC 2025",
+    items: [
+      {
+        id: "akie-iriyama-2025",
+        name: "Akie Iriyama",
+        organization: "Professor, Waseda University",
+        image:
+          "/past-speakers-judges/NTTSC 2024/Akie Iriyama, Professor, Waseda University - NSC 2024 Speaker.png",
+      },
+      {
+        id: "takashi-ebihara-2025",
+        name: "Takashi Ebihara",
+        organization: "Executive Vice President, NTT Inc.",
+        image:
+          "/past-speakers-judges/NTTSC 2024/Takashi Ebihara, Executive Vice President, NTT Inc. - NSC 2024 Speaker.png",
+      },
+      {
+        id: "ken-katsuyama-2025",
+        name: "Ken Katsuyama",
+        organization: "Senior Vice President, NTT Inc.",
+        image:
+          "/past-speakers-judges/NTTSC 2024/Ken Katsuyama, Senior Vice President, NTT Inc. - NSC 2024 Speaker.png",
+      },
+      {
+        id: "kuan-hsu-2025",
+        name: "Kuan Hsu",
+        organization: "Managing Director, Synexia Ventures",
+        image:
+          "/past-speakers-judges/NTTSC 2024/Kuan Hsu, Managing Director, Synexia Ventures - NSC 2024 Judge.png",
+      },
+      {
+        id: "takeshi-ebihara-2025",
+        name: "Takeshi Ebihara",
+        organization: "Founding General Partner, Rebright Partners",
+        image:
+          "/past-speakers-judges/NTTSC 2024/Takeshi Ebihara, Founding General Partner, Rebright Partners - NSC 2024 Judge.png",
+      },
+      {
+        id: "anthony-liem-2025",
+        name: "Anthony Liem",
+        organization: "Founding Partner, GDP Venture",
+        image:
+          "/past-speakers-judges/NTTSC 2024/Anthony Liem, Founding Partner, GDP Venture - NSC 2024 Judge.png",
+      },
+      {
+        id: "gary-khoeng-2025",
+        name: "Gary Khoeng",
+        organization: "Partner, Vertex Ventures",
+        image:
+          "/past-speakers-judges/NTTSC 2024/Gary Khoeng, Partner, Vertex Ventures - NSC 2024 Judge.png",
+      },
+      {
+        id: "yuma-kotake-2025",
+        name: "Yuma Kotake",
+        organization: "Director, NTT Docomo Ventures",
+        image:
+          "/past-speakers-judges/NTTSC 2024/Yuma Kotake, Director, NTT Docomo Ventures - NSC 2024 Judge.png",
+      },
+      {
+        id: "yasunori-kinebuchi-2025",
+        name: "Yasunori Kinebuchi",
+        organization: "Director, NTT",
+        image:
+          "/past-speakers-judges/NTTSC 2024/Yasunori Kinebuchi, Director, NTT - NSC 2024 Judge.png",
+      },
+    ],
+  },
   {
     title: "NTTSC 2024",
     items: [
