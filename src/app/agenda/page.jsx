@@ -4,7 +4,6 @@ import { ListSection } from "@/components/modules/list-section";
 import { PARTNER_CONTENT_2026 } from "@/constant/finalist-content";
 import { NttGroupCompanies } from "./_components/ntt-group-companies";
 import { FaqSection } from "./_components/faq-content";
-import { ComingSoonSection2026 } from "@/components/nsc-2026/coming-soon-section";
 import { EventSchedule } from "./_components/event-schedule";
 
 export const metadata = {
@@ -27,7 +26,7 @@ export default function About() {
           </span>
         }
       />
-      <ComingSoonSection2026 />
+      {/* <ComingSoonSection2026 /> */}
       {/* <EventPromotion /> */}
       <EventSchedule />
       <ListSection

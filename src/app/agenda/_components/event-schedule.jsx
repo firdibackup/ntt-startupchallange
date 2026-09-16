@@ -42,10 +42,7 @@ export function EventSchedule() {
                   Time
                 </TableHead>
                 <TableHead className="text-white py-3 font-semibold">
-                  Topic
-                </TableHead>
-                <TableHead className="text-white py-3 font-semibold">
-                  Presenter
+                  Title
                 </TableHead>
               </TableRow>
             </TableHeader>
@@ -63,9 +60,6 @@ export function EventSchedule() {
                   </TableCell>
                   <TableCell className="text-white py-3 pr-6">
                     {item.content}
-                  </TableCell>
-                  <TableCell className="text-white py-3 pr-6">
-                    {item.presenter || ""}
                   </TableCell>
                 </TableRow>
               ))}
@@ -90,11 +84,6 @@ export function EventSchedule() {
                 <div className="flex flex-col">
                   <span className="font-medium text-white">{item.time}</span>
                   <span className="text-white">{item.content}</span>
-                  {item.presenter && (
-                    <span className="text-sm text-gray-300 mt-1">
-                      {item.presenter}
-                    </span>
-                  )}
                 </div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
