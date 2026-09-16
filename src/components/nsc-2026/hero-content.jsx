@@ -2,15 +2,15 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 
 const HERO_ACTIONS = [
-  {
-    label: "STARTUP REGISTRATION FOR NTTSC 2026",
-    href: "/register?type=startup",
-    external: false,
-    disabled: false,
-    badge: null,
-    className:
-      "border border-blue-ntt bg-blue-ntt text-white shadow-[0_20px_45px_rgba(37,111,184,0.28)] hover:bg-[#1b5f9e]",
-  },
+  // {
+  //   label: "STARTUP REGISTRATION FOR NTTSC 2026",
+  //   href: "/register?type=startup",
+  //   external: false,
+  //   disabled: false,
+  //   badge: null,
+  //   className:
+  //     "border border-blue-ntt bg-blue-ntt text-white shadow-[0_20px_45px_rgba(37,111,184,0.28)] hover:bg-[#1b5f9e]",
+  // },
   {
     label: "ATTEND OUR INFORMATION SESSIONS IN YOUR CITY",
     href: "/#infosession",
@@ -19,7 +19,7 @@ const HERO_ACTIONS = [
   },
   {
     label: "ATTEND THE FINAL DAY NTTSC 2026",
-    // href: "https://www.eventbrite.hk/e/final-day-ntt-startup-challenge-2026-tickets-1986790310301?aff=oddtdtcreator",
+    href: "https://www.eventbrite.hk/e/final-day-ntt-startup-challenge-2026-tickets-1986790310301",
     className:
       "border border-blue-ntt-200/35 bg-[#08172d]/85 text-blue-ntt-200 shadow-[0_18px_36px_rgba(8,23,45,0.32)] hover:border-blue-ntt-200/55 hover:bg-[#0d2342]",
   },

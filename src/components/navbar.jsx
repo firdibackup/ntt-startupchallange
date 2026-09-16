@@ -54,9 +54,9 @@ const NAVBAR_ACTIONS = [
     href: "mailto:info@ntt-startupchallenge.com?subject=Newsletter%20Subscription",
   },
   {
-    title: "Register",
-    href: "/register?type=startup",
-    external: false,
+    title: "Attend Final Day",
+    href: "https://www.eventbrite.hk/e/final-day-ntt-startup-challenge-2026-tickets-1986790310301",
+    external: true,
     disabled: false,
     // badge: "coming soon",
   },
