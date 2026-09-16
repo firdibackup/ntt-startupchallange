@@ -36,10 +36,10 @@ export function Nsc2026PageContent() {
         title="Meet the Speakers & Judges of 2026"
         items={SPEAKER_JUDGES_CONTENT_2026}
       />
-      <PersonCarouselSection2026
+      {/* <PersonCarouselSection2026
         title="Past Speakers And Judges"
         items={SPEAKERS_JUDGES_CONTENT}
-      />
+      /> */}
       <PastSpeakersJudgesDialog />
       <InfoSessionSection2026 />
       <ListSection

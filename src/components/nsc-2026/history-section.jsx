@@ -51,7 +51,10 @@ export function HistorySection2026() {
               key={idx}
               className="bg-[#050C1F] border border-white/5 rounded-2xl p-6 hover:bg-[#0A132C] hover:border-blue-ntt-200/30 transition-all duration-300 group"
             >
-              <div className="flex justify-between items-start mb-6">
+              {/* Cards sit two-per-row even on phones, so the number and icon
+                  are too wide to share a line there: stack them below sm and
+                  reverse the order so the icon reads as a badge above the number. */}
+              <div className="flex flex-col-reverse items-start gap-3 mb-4 sm:flex-row sm:justify-between sm:items-start sm:gap-0 sm:mb-6">
                 <p className="text-3xl md:text-4xl font-black text-white group-hover:text-blue-ntt-200 transition-colors">
                   {item.number}+
                 </p>

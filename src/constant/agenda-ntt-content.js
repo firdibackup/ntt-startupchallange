@@ -124,7 +124,7 @@ export const SCHEDULE_DATA = [
   },
   {
     time: "17:10-19:00",
-    content: "Networking (Private Event / By Invitation)",
+    content: "Networking",
     presenter: "",
     isHighlighted: false,
     isBreak: true,

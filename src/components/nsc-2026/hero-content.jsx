@@ -11,12 +11,12 @@ const HERO_ACTIONS = [
   //   className:
   //     "border border-blue-ntt bg-blue-ntt text-white shadow-[0_20px_45px_rgba(37,111,184,0.28)] hover:bg-[#1b5f9e]",
   // },
-  {
-    label: "ATTEND OUR INFORMATION SESSIONS IN YOUR CITY",
-    href: "/#infosession",
-    className:
-      "border border-white/20 bg-white/12 text-white shadow-[0_18px_40px_rgba(5,12,31,0.22)] hover:bg-white/18",
-  },
+  // {
+  //   label: "ATTEND OUR INFORMATION SESSIONS IN YOUR CITY",
+  //   href: "/#infosession",
+  //   className:
+  //     "border border-white/20 bg-white/12 text-white shadow-[0_18px_40px_rgba(5,12,31,0.22)] hover:bg-white/18",
+  // },
   {
     label: "ATTEND THE FINAL DAY NTTSC 2026",
     href: "https://www.eventbrite.hk/e/final-day-ntt-startup-challenge-2026-tickets-1986790310301",
