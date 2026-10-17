@@ -17,6 +17,7 @@ import {
 import { NewsSection } from "@/components/news-section";
 import { ListSection } from "@/components/modules/list-section";
 import { PARTNER_CONTENT_2026 } from "@/constant/finalist-content";
+import { TOP_STARTUPS_10_2026 } from "@/constant/top-startup";
 import SectionCoverLink from "@/components/section-cover-link";
 import { PastSpeakersJudgesDialog } from "@/components/nsc-2026/past-speakers-judges-dialog";
 import { VenuePartner } from "@/components/nsc-2026/venue-partner";
@@ -32,7 +33,12 @@ export function Nsc2026PageContent() {
         <HeroContent2026 />
       </Hero>
       <ComingSoonSection2026 />
-      <section className="container mx-auto px-4">
+         <ListSection
+        title={"Top 10 Finalists of NTT Startup Challenge 2026"}
+        items={TOP_STARTUPS_10_2026}
+        is2026
+      />
+      <section className="container mx-auto px-4 pt-12">
         <Link
           href="/top-20-startup-of-ntt-challange/2026"
           aria-label="View the Top 20 Startups of NTT Startup Challenge 2026"
@@ -73,6 +79,7 @@ export function Nsc2026PageContent() {
       /> */}
       <PastSpeakersJudgesDialog />
       <InfoSessionSection2026 />
+   
       <ListSection
         title={"Partners & Community Partners"}
         items={PARTNER_CONTENT_2026}

@@ -33,35 +33,35 @@ export const BENEFIT_LIST = [
 export const SCHEDULE_DATA = [
   {
     time: "13:00-13:10",
-    content: "Opening Remarks",
+    content: "Welcome & Introduction",
     presenter: "",
     isHighlighted: false,
     isBreak: false,
   },
   {
     time: "13:10-13:20",
-    content: "Keynote Speech ①",
+    content: "Opening Remarks",
     presenter: "",
     isHighlighted: false,
     isBreak: false,
   },
   {
     time: "13:20-13:30",
-    content: "Keynote Speech ②",
+    content: "Keynote Speech ①",
     presenter: "",
     isHighlighted: false,
     isBreak: false,
   },
   {
     time: "13:30-13:40",
-    content: "Keynote Speech ③",
+    content: "Keynote Speech ②",
     presenter: "",
     isHighlighted: false,
     isBreak: false,
   },
   {
     time: "13:40-14:30",
-    content: "Pitch Session ① (each 5min/Q&A 3min/Transition 2min) x 5companies",
+    content: "Pitch Session 1 (5 min pitch / 3 min Q&A / 2 min transition) x 5",
     presenter: "",
     isHighlighted: false,
     isBreak: false,
@@ -75,7 +75,7 @@ export const SCHEDULE_DATA = [
   },
   {
     time: "14:50-15:40",
-    content: "Pitch Session ② (each 5min/Q&A 3min/Transition 2min) x 5companies",
+    content: "Pitch Session 2 (5 min pitch / 3 min Q&A / 2 min transition) x 5",
     presenter: "",
     isHighlighted: false,
     isBreak: false,
@@ -103,7 +103,7 @@ export const SCHEDULE_DATA = [
   },
   {
     time: "16:20-16:50",
-    content: "Award Ceremony",
+    content: "Awards Ceremony",
     presenter: "",
     isHighlighted: false,
     isBreak: false,
@@ -117,17 +117,17 @@ export const SCHEDULE_DATA = [
   },
   {
     time: "17:00-17:10",
-    content: "Venue Preparation",
+    content: "Venue Turnaround",
     presenter: "",
     isHighlighted: false,
-    isBreak: false,
+    isBreak: true,
   },
   {
     time: "17:10-19:00",
     content: "Networking",
     presenter: "",
     isHighlighted: false,
-    isBreak: true,
+    isBreak: false,
   },
 ];
 

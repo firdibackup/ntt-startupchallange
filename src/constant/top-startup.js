@@ -954,6 +954,31 @@ const TOP_STARTUPS_20_2026 = TOP_20_2026_NAMES.map((name) => {
   return startup;
 });
 
+// Display order of the 2026 Top 10 finalists; urls and logos come from TOP_STARTUPS_2026 by name.
+const TOP_10_2026_NAMES = [
+  "Logisly",
+  "Morse Micro Pty. Ltd.",
+  "Neurowyzr",
+  "OmniCard",
+  "SatSure Analytics India Pvt. Ltd.",
+  "SGService",
+  "TartanHQ Solutions Private Limited",
+  "Vayana",
+  "Whale Tech Pte. Ltd.",
+  "Xtractify",
+];
+
+const TOP_STARTUPS_10_2026 = TOP_10_2026_NAMES.map((name) => {
+  const startup = TOP_STARTUPS_2026.find((item) => item.name === name);
+  if (!startup) throw new Error(`Top 10 2026 startup not found in TOP_STARTUPS_2026: ${name}`);
+  return {
+    id: startup.slug,
+    name: startup.name,
+    url: /^https?:\/\//.test(startup.url) ? startup.url : `https://${startup.url}`,
+    image: `/top-50-startup-2026/${startup.slug}.png`,
+  };
+});
+
 const TOP_20_STARTUPS_BY_YEAR = {
   2025: {
     year: "2025",
@@ -1001,6 +1026,7 @@ export {
   TOP_STARTUPS_2026,
   TOP_STARTUPS_20,
   TOP_STARTUPS_10,
+  TOP_STARTUPS_10_2026,
   TOP_STARTUP_FINALISTS_BY_YEAR,
   TOP_20_STARTUPS_BY_YEAR,
 };
