@@ -204,6 +204,13 @@ export const SPEAKER_JUDGES_CONTENT_2026 = [
     image: "/speakers/2026/Ken Katsuyama.webp",
     bio: "Ken Katsuyama is the Senior Vice President, Head of Global Business at Nippon Telegraph and Telephone Corporation (NTT). His current responsibility is the global business of the whole NTT group. In addition, he is a member of the board of directors of NTT DATA, Inc., a major operating company of NTT group covering outside of Japan.",
   },
+  {
+    id: "reo-kusaka-2026",
+    name: "Reo Kusaka",
+    organization: "Head of Global Business, NTT EAST",
+    image: "/speakers/2026/Reo Kusaka.png",
+    bio: "Reo Kusaka is Head of Global Business at NTT EAST, leading new business development, strategic investments, and partnerships across Asia. He also serves as a Commissioner of Integrasi Jaringan Ekosistem (IJE) in Indonesia, supporting its mission to expand affordable fixed broadband access to underserved communities.",
+  },
 ];
 
 export const PAST_SPEAKERS_JUDGES_CONTENT = [
