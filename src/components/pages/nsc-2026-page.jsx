@@ -36,6 +36,7 @@ export function Nsc2026PageContent() {
          <ListSection
         title={"Top 10 Finalists of NTT Startup Challenge 2026"}
         items={TOP_STARTUPS_10_2026}
+        imageClassName="h-auto w-[150px] md:w-[200px]"
         is2026
       />
       <section className="container mx-auto px-4 pt-12">
@@ -49,7 +50,7 @@ export function Nsc2026PageContent() {
             alt="Top 20 Startups of NTT Startup Challenge 2026"
             width={1000}
             height={1000}
-            className="mx-auto h-auto w-[94.4%] max-w-[60.4rem]"
+            className="mx-auto h-auto w-[94.4%] max-w-[52.85rem]"
           />
         </Link>
         <Link
@@ -62,7 +63,7 @@ export function Nsc2026PageContent() {
             alt="Top 50 Finalists of NTT Startup Challenge 2026"
             width={1000}
             height={1000}
-            className="mx-auto h-auto w-full max-w-5xl"
+            className="mx-auto h-auto w-full max-w-4xl"
           />
         </Link>
       </section>
